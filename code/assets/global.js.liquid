@@ -823,23 +823,23 @@ class VariantSelects extends HTMLElement {
   filterVariantLogo (currentVariant) {
     const imgGreen = document.getElementById('imgGreen');
     const imgBlue = document.getElementById('imgBlue');
-
+    console.log(myProduct);
 
     if (currentVariant.option1 == "32 loads") {
-        imgGreen.src = currentVariant.featured_image.src
+        imgGreen.src = myProduct.images[9];
         imgGreen.style.width = '55px';
         imgGreen.style.height = '50px';
 
-        imgBlue.src = currentVariant.featured_image.src
+        imgBlue.src = myProduct.images[0];
         imgBlue.style.width = '55px'
         imgBlue.style.height = '50px'
 
       } else if (currentVariant.option1 == "384 loads") {
-        imgGreen.src = currentVariant.featured_image.src
+        imgGreen.src = myProduct.images[1];
         imgGreen.style.width = '55px';
         imgGreen.style.height = '50px';
 
-        imgBlue.src = currentVariant.featured_image.src
+        imgBlue.src = myProduct.images[2];
         imgBlue.style.width = '55px'
         imgBlue.style.height = '50px'
       }

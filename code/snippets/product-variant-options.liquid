@@ -60,12 +60,16 @@
       {% endif %}
     >
     <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+      <script>
+        var myProduct = {{ product | json }};
+      </script>
         {% if value == 'FRAGRANCE-FREE' %}
           <img id="imgGreen" src="{{ product.images[9] | product_img_url: "40x" }}" alt="">
           {% elsif value == 'FRESH LINEN' %}
             <img id="imgBlue" src="{{ product.images[0]| product_img_url: "40x" }}" alt="">
       {% endif %}
-      
+    
+
       {{ value -}}
       <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
     </label>
